@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Image Layout</title>
+  <style>
+    .float-image {
+      float: left;
+      margin: 10px;
+      width: 200px;
+    }
+
+    .text-content {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      float: left;
+      width: 200px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      height: 100%;
+    }
+     footer {
+      clear: both;
+      background-color: #f0f0f0;
+      padding: 10px;
+      text-align: center;
+      margin-top: 20px;
+    }
+     .container {
+      position: relative;
+      width: 400px;
+      height: 300px;
+      background-color: #f0f0f0;
+      border: 2px solid #ccc;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .floating-box {
+      position: absolute;
+      top: 30px;
+      left: 50px;
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .content {
+      margin-top: 150px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="text-content">
+    <img src="note.jpg" alt="Sample Image" class="float-image">
+    <p>Notecards—also known as index cards or flashcards—are small, rectangular pieces of paper or cardstock used for organizing and presenting information in a concise, portable format. They're a classic tool for studying, brainstorming, and public speaking.
+  </p> 
+  </div>
+  <p>Notecards—also known as index cards or flashcards—are small, rectangular pieces of paper or cardstock used for organizing and presenting information in a concise, portable format. They're a classic tool for studying, brainstorming, and public speaking.
+  </p> 
+  <p>Modern apps like Anki, Quizlet, and Notion offer digital notecards with features like spaced repetition, multimedia support, and cloud syncing—bringing the same benefits with added convenience.</p>
+  <div class="container">
+    <div class="floating-box">Float</div>
+    <div class="content">
+      <p>This is some content inside the container. The blue box is absolutely positioned relative to this container.</p>
+    </div>
+  </div>
+  <footer>
+    This is the footer. We arrange this footer to clear the float and to stay below the image.
+  </footer>
+</body>
+</html>
