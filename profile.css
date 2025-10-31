@@ -5,6 +5,15 @@ body {
       color: #333;
     
     }
+a i {
+    font-size: 2rem;
+    color: #333;
+    margin: 0 15px;
+}
+
+a i:hover {
+    color: #ff6347;
+}
     #my{
       color:hsl(249, 64%, 44%);
     }
@@ -97,3 +106,4 @@ dd {
     }
 
     }
+
