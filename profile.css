@@ -62,7 +62,7 @@ body {
       color: white;
     }
     tr:nth-child(even) {
-      background-color: #01c994;
+      background-color: #70A3BFFF;
     }
     .weekend {
       background-color: #dff0d8;
@@ -95,4 +95,5 @@ dd {
       table, th, td {
         font-size: 14px;
     }
+
     }
