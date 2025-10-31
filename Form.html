@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>My Form</title>
+      <style>
+* {
+  box-sizing: border-box;
+}
+
+.responsive-form {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid #04AA6D;;
+  background-color:  #f2f2f2;
+  padding: 20px;
+}
+    label:hover {
+      background-color: lightblue;
+      cursor: pointer;
+    }
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+label {
+  transition: background-color 0.3s ease;
+  min-width: 48%;
+  margin-bottom: 10px;
+}
+input[type="radio"]{
+  appearance: none; /* Removes default styling */
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007BFF;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="radio"]:checked {
+  background-color: #007BFF;
+  border-color: #0056b3;
+}
+
+/* General Reset for Input */
+input[type="checkbox"] {
+  display: none; /* Hide the default checkbox */
+}
+
+/* Custom Checkbox Container */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Custom Checkbox Design */
+.custom-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 4px; /* Rounded corners */
+  margin-right: 10px;
+  background-color: #fff;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Checked State */
+input[type="checkbox"]:checked + span::before {
+  background-color: #007bff;
+  border-color: #007bff;
+  content: "✔";
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* Hover Effect */
+.custom-checkbox:hover::before {
+  border-color: #0056b3;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+select {
+  min-width: 45%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  label,
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=submit],
+  input[type=checkbox],
+  input[type=radio],
+  select {
+    flex: 100%;
+    min-width: 100%;
+  }
+}
+</style>
+    </head>
+  <body>
+    <div class="responsive-form">
+    <form action="#action">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" pattern="[A-Za-z]+" title="Enter a valid name" required><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" 
+    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" 
+    title="Enter a valid email address (e.g., user@example.com)" required><br>
+  <label for="password">Password:</label>
+    <input type="password" id="password" name="password" 
+    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,}" 
+    title="Must contain at least 8 characters, one uppercase, one lowercase, one number, and one special character." required><br>
+    <label for="country">Select Country:</label>
+<select id="country" name="country" required>
+<option value="Afghanistan">Afghanistan</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Bangladesh">Bangladesh</option>
+<option value="Brazil">Brazil</option>
+<option value="Canada">Canada</option>
+<option value="Denmark">Denmark</option>
+<option value="Egypt">Egypt</option>
+<option value="France">France</option>
+<option value="India">India</option>
+<option value="Nepal">Nepal</option>
+<option value="Switzerland">Switzerland</option>
+<!-- Add more countries as needed -->
+</select><br>
+    <label for="gender">Gender</label><br><br>
+    <label>
+     <input type="radio" name="gender" value="male">
+    Male
+  </label>
+  <label>
+    <input type="radio" name="gender" value="female">
+    Female
+  </label>
+  <label>
+    <input type="radio" name="gender" value="others">
+    Others
+    </label>
+    <label for="skills">Skills</label><br><br>
+    <label class="custom-checkbox">
+    <input type="checkbox" />
+    <span>HTML</span>
+  </label>
+  <label class="custom-checkbox">
+    <input type="checkbox" />
+    <span>CSS</span>
+  </label>
+  <label class="custom-checkbox">
+    <input type="checkbox" />
+    <span>JavaScript</span>
+  </label>
+  <input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>
