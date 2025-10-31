@@ -1,0 +1,98 @@
+body {
+      font-family: Arial;
+      margin: 20px;
+      background: #f9f9f9;
+      color: #333;
+    
+    }
+    #my{
+      color:hsl(249, 64%, 44%);
+    }
+    .nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    /* Navigation links */
+    .nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    /* Hover effect */
+    .nav a:hover {
+      background-color: #575757;
+    }
+    .container {
+      display: flex;
+      align-items: center; /* Aligns items vertically */
+      gap: 50px; /* Adds space between the image and text */
+    }
+
+    .container img {
+      max-width: 150px; /* Adjust image size */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px; /* Optional: rounded corners */
+    }
+
+    .container .text {
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: justify;
+    }
+    h2, h4 {
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #2980b9;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #01c994;
+    }
+    .weekend {
+      background-color: #dff0d8;
+      padding: 15px;
+      border-left: 5px solid #3c763d;
+    }
+    .circle-image {
+  width: 300px;       /* Set your desired width */
+  height: 300px;      /* Ensure width and height are equal */
+  border-radius: 50%; /* Creates a perfect circle */
+  object-fit: cover;  /* Maintains aspect ratio and fills the circle */
+}
+dl {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+dt {
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+dd {
+  margin-left: 20px;
+  color: #555;
+}
+    @media (max-width: 600px) {
+      table, th, td {
+        font-size: 14px;
+    }
+    }
